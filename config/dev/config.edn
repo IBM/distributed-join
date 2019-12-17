@@ -1,0 +1,42 @@
+{
+ :cache-capacity                     40
+ :redis-uri                          "redis://127.0.0.1:6379/3"
+ :redis-conn-pool-max-active         10
+ :redis-conn-pool-min-idle           0
+ :redis-conn-pool-max-idle           10
+ :redis-req-timeout-ms               5000
+
+ :jetty-port                         3000
+ :jetty-stop-timeout                 60000
+
+ ; max-wait times are in seconds
+ :fork-max-wait                      10
+ :join-max-wait                      600
+
+ :check-publish-delay-ms             10000
+
+ :publish-thread-count               1
+ :publish-delay-non-found-ms         1000
+ :publish-all-complete-timeout-ms    30000
+ :recover-publish-thread-count       1
+ :recover-publish-delay-non-found-ms 1000
+
+ :max-retry-post-publish             3
+ :max-retry-post-timeout-publish     3
+ ; timeout in milliseconds for the pool to generate a connection
+ :publish-connection-pool-timeout-ms 1000
+ ; timeout in milliseconds for the connection to become established
+ :publish-connection-timeout-ms      1000
+ ; timeout in milliseconds for the arrival of a response over the established connection
+ :publish-request-timeout-ms         2000
+
+ :fork-count-max                     999
+ :join-id-len-max                    255
+ :transaction-id-len-max             255
+ :destination-url-len-max            2049
+ :timeout-destination-url-len-max    2049
+ :join-message-len-max               262144 ; 256 * 1024
+ :barrier-id-len-max                 511 ; (:join-id-len-max) 255 + (separator) 1 + (:transaction-id-len-max) 255
+
+ :shutdown-scheduled-work-delay-ms   10000}
+
