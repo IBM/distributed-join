@@ -1,4 +1,4 @@
-(defproject distributed-join (clojure.string/trim (slurp "version"))
+(defproject distributed-join "0.1.1"
   :description "Fork Join Service"
   :url "https://github.ibm.com/wdp-dist/distributed-join"
   :min-lein-version "2.0.0"
